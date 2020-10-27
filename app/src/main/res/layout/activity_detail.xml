@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:singleLine="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="40dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:background="@color/colorAccent"
+            android:id="@+id/title_tv"
+            android:text="Original Title"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="150dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:id="@+id/iv_poster"
+                android:layout_height="200dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                        android:text="@string/user_rating"
+                        android:layout_margin="10dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textSize="14sp"
+                        tools:text="6.8/10"
+                        android:id="@+id/user_rating_tv"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/release_date"
+                        android:layout_margin="10dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textSize="14sp"
+                        tools:text="12/12/12"
+                        android:id="@+id/date_tv"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mark_as_favourite"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:id="@+id/favorite_btn"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            android:text="@string/plot_synopsis"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/plot_tv"
+            android:textSize="15sp"
+            tools:text="Plot Synopsis : "
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            android:text="@string/trailers"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_videos"
+            android:layout_margin="10dp"
+            />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:id="@+id/pb_videos"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/tv_error_trailer"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:text="@string/something_went_wrong_please_try_again"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            android:text="@string/reviews"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_reviews"
+            android:layout_margin="10dp"
+            />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:id="@+id/pb_review"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/tv_error_review"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:text="@string/something_went_wrong_please_try_again"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
